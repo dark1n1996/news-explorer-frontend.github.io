@@ -1,0 +1,19 @@
+@import url('./__facebook/footer__facebook.css');
+@import url('./__github/footer__github.css');
+@import url('./__main/footer__main.css');
+@import url('./__present/footer__present.css');
+@import url('./__ya/footer__ya.css');
+
+.footer {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 740px) {
+  .footer {
+    position: relative;
+    height: 110px;
+  }
+}

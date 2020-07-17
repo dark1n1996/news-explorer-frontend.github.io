@@ -1,0 +1,12 @@
+.article__image {
+  background-image: url('../../../images/image_04.png');
+  height: 272px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .article__image {
+    height: 150px;
+  }
+}

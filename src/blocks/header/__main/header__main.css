@@ -1,0 +1,27 @@
+@import url('./_authorized/header__main_authorized.css');
+
+.header__main {
+  margin-left: calc(100% - 685px);
+  font-size: 18px;
+  line-height: 24px;
+  width: 69px;
+  height: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.header__main:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 900px) {
+  .header__main {
+    margin-left: calc(100% - 427px);
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header__main {
+    display: none;
+  }
+}

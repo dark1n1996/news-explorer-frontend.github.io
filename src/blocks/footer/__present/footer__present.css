@@ -1,0 +1,27 @@
+.footer__present {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #B6BCBF;
+  margin: 0px;
+  margin-left: 104px;
+  width: 300px;
+  height: 22px;
+}
+
+@media screen and (max-width: 940px) {
+  .footer__present {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .footer__present {
+    bottom: 0px;
+    left: calc(50% - 150px);
+    position: absolute;
+    margin: 0;
+  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vendor/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>NewsExplorer</title>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body class="page">
+  <header class="header">
+    <div class="header__logo">NewsExplorer</div>
+    <div class="header__open"></div>
+    <!--header__main_authorized - для того, чтобы блоки статей и пользователя корректно отображались при разных разрешениях, необходимо включить при их использовании -->
+    <a href="https://thenewsexplorer.tk/" class="header__main">Главная</a>
+    <button class="header__button header__button_autho">Авторизоваться</button>
+    <a href="https://thenewsexplorer.tk/articles" class="header__articles">Сохранённые статьи</a>
+    <button class="header__button header__button_user">Грета [-></button>
+  </header>
+  <main class="main">
+    <section class="search">
+      <h1 class="search__title">Что в мире творится?</h1>
+      <h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
+      <form class="search__form">
+        <input class="search__input" type="text" placeholder="Природа">
+        <button class="button search__button" type="submit">Искать</button>
+      </form>
+    </section>
+    <section class="popup popup__success">
+      <div class="popup__content">
+        <div class="popup__close"></div>
+        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+        <div class="popup__entry">Выполнить вход</div>
+      </div>
+    </section>
+    <section class="popup popup__signin">
+      <div class="popup__content">
+        <div class="popup__close"></div>
+        <h3 class="popup__title">Вход</h3>
+        <form class="popup__form" name="">
+          <label>
+            <span class="popup__text">Email</span>
+            <input required name="email" class="popup__input" placeholder="Введите почту">
+            <span class="popup__error"></span>
+          </label>
+          <label>
+            <span class="popup__text">Пароль</span>
+            <input required name="password" class="popup__input" placeholder="Введите пароль">
+            <span class="popup__error"></span>
+          </label>
+            <button class="button popup__button popup__button_disabled">Войти</button>
+            <div class="popup__reg"><span>или </span><span class="popup__span">Зарегистрироваться</span></div>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup__signup">
+      <div class="popup__content">
+        <div class="popup__close"></div>
+        <h3 class="popup__title">Регистрация</h3>
+        <form class="popup__form" name="">
+          <label>
+            <span class="popup__text">Email</span>
+            <input required name="email" class="popup__input" placeholder="Введите почту">
+            <span class="popup__error"></span>
+          </label>
+          <label>
+            <span class="popup__text">Пароль</span>
+            <input required name="password" class="popup__input" placeholder="Введите пароль">
+            <span class="popup__error"></span>
+          </label>
+          <label>
+            <span class="popup__text">Имя</span>
+            <input required name="name" class="popup__input" placeholder="Введите имя">
+            <span class="popup__error"></span>
+          </label>
+            <button class="button popup__button popup__button_disabled">Зарегистрироваться</button>
+            <div class="popup__reg"><span>или </span><span class="popup__span">Войти</span></div>
+        </form>
+      </div>
+    </section>
+    <section class="preloader">
+      <i class="preloader__item"></i>
+      <h3 class="preloader__text">Идет поиск новостей...</h3>
+    </section>
+    <section class="not-found">
+      <div class="not-found__image"></div>
+      <h2 class="not-found__title">Ничего не найдено</h2>
+      <h3 class="not-found__text">К сожалению по вашему запросу ничего не найдено.</h3>
+    </section>
+    <section class="articles">
+      <h2 class="articles__results">Результаты поиска</h2>
+      <div class="articles-list">
+        <div class="article">
+          <div class="article__image">
+            <button class="button article__button article__button_saved"></button>
+          </div>
+          <div>
+            <h4 class="article__date">2 августа, 2019</h4>
+            <h2 class="article__title">Национальное достояние – парки</h2>
+            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            <h3 class="article__source">Лента.ру</h3>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article__image">
+            <button class="button article__button article__button_saved"></button>
+          </div>
+          <div>
+            <h4 class="article__date">2 августа, 2019</h4>
+            <h2 class="article__title">Лесные огоньки: история одной фотографии</h2>
+            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+            <h3 class="article__source">Медуза</h3>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article__image">
+            <button class="button article__button article__button_saved"></button>
+          </div>
+          <div>
+            <h4 class="article__date">2 августа, 2019</h4>
+            <h2 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <h3 class="article__source">РИА</h3>
+          </div>
+        </div>
+      </div>
+      <button class="articles__button">Показать еще</button>
+    </section>
+    <section class="author">
+      <img class="author__image" src="images/image-03.png" alt="Тут должна быть фотография автора">
+      <div class="author__about">
+        <h2 class="author__title">Об авторе</h2>
+        <p class="author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+        <p class="author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <h3 class="footer__present">© 2020 Supersite, Powered by News API</h3>
+    <a href="https://thenewsexplorer.tk/" class="footer__main">Главная</a>
+    <a href="https://praktikum.yandex.ru/" target="_blank" class="footer__ya">Яндекс.Практикум</a>
+    <a href="https://github.com/" target="_blank" class="footer__github"></a>
+    <a href="https://twitter.com/" target="_blank" class="footer__facebook"></a>
+  </footer>
+</body>
+</html>

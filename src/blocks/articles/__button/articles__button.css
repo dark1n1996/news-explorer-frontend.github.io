@@ -1,0 +1,27 @@
+.articles__button {
+  width: 288px;
+  height: 64px;
+  margin-top: 64px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: white;
+  border-radius: 80px;
+  border: 0px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.articles__button:hover {
+  opacity: 0.5;
+}
+
+
+@media screen and (max-width: 940px) {
+  .articles__button {
+    margin-top: 22px;
+  }
+}

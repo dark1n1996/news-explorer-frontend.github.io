@@ -1,0 +1,25 @@
+@import url('./_saved/article__button_saved.css');
+
+.article__button {
+  background-image: url('../../../images/Group\ 13.png');
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  top: 24px;
+  right: 24px;
+  position: absolute;
+  border: 0px;
+  background-color: white;
+}
+
+.article__button:hover {
+  background-image: url('../../../images/Group\ 14.png');
+}
+
+@media screen and (max-width: 768px) {
+  .article__button {
+    top: 8px;
+    right: 8px;
+  }
+}

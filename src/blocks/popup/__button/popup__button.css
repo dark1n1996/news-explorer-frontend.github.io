@@ -1,0 +1,21 @@
+@import url('./_disabled/popup__button_disabled.css');
+
+.popup__button {
+  border-radius: 100px;
+  width: 358px;
+  height: 64px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  background: #2F71E5;
+  border: 0px;
+}
+
+.popup__button:hover {
+  background: #347EFF;
+}

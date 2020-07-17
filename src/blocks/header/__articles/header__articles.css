@@ -1,0 +1,21 @@
+.header__articles {
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 34px;
+  color: #B6BCBF;
+  width: 178px;
+  height: 24px;
+  display: none;
+  text-decoration: none;
+}
+
+.header__articles:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 740px) {
+  .header__articles {
+    display: none;
+  }
+}

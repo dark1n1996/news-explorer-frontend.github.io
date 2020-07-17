@@ -1,0 +1,29 @@
+.footer__github {
+  background-image: url('../../../images/Vector.svg');
+  width: 22px;
+  height: 22px;
+  margin-left: 42px;
+}
+
+.footer__github:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__github {
+    margin-left: 26px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .footer__github {
+    margin: 0;
+    bottom: 105px;
+    right: 140px;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
