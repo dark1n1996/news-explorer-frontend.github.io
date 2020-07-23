@@ -1,22 +1,26 @@
-@import url('./_authorized/header__main_authorized.css');
+@import url('./_autho/header__main_autho.css');
+@import url('./_user/header__main_user.css');
 
 .header__main {
-  margin-left: calc(100% - 685px);
   font-size: 18px;
   line-height: 24px;
   width: 69px;
-  height: 24px;
   text-decoration: none;
   color: white;
+  font-family: Roboto;
+  border-bottom: 3px solid white;
+  height: ;: 78px;
+  line-height: 78px;
 }
 
 .header__main:hover {
   opacity: 0.6;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .header__main {
-    margin-left: calc(100% - 427px);
+    height: 54px;
+    line-height: 54px;
   }
 }
 

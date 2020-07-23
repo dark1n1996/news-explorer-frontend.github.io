@@ -1,7 +1,6 @@
 @import url('./__logo/header__logo.css');
 @import url('./__button/header__button.css');
 @import url('./__main/header__main.css');
-@import url('./__user/header__user.css');
 @import url('./__articles/header__articles.css');
 @import url('./__open/header__open.css');
 
@@ -16,8 +15,7 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    height: 66px;
-    align-items: center;
+    height: 56px;
   }
 }
 

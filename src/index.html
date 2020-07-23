@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="vendor/normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css[0]%>">
   <title>NewsExplorer</title>
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 </head>
 <body class="page">
-  <header class="header">
+  <header class="header header__autho" style="display: none;">
     <div class="header__logo">NewsExplorer</div>
     <div class="header__open"></div>
-    <!--header__main_authorized - для того, чтобы блоки статей и пользователя корректно отображались при разных разрешениях, необходимо включить при их использовании -->
-    <a href="https://thenewsexplorer.tk/" class="header__main">Главная</a>
+    <a href="https://thenewsexplorer.tk/" class="header__main header__main_autho">Главная</a>
     <button class="header__button header__button_autho">Авторизоваться</button>
-    <a href="https://thenewsexplorer.tk/articles" class="header__articles">Сохранённые статьи</a>
-    <button class="header__button header__button_user">Грета [-></button>
+  </header>
+  <header class="header header__user">
+    <div class="header__logo">NewsExplorer</div>
+    <div class="header__open"></div>
+    <a href="./index.html" class="header__main header__main_user">Главная</a>
+    <a href="./articles.html" class="header__articles">Сохранённые статьи</a>
+    <button class="header__button header__button_user">Грета <span>[-></span></button>
   </header>
   <main class="main">
     <section class="search">
@@ -27,18 +30,32 @@
         <button class="button search__button" type="submit">Искать</button>
       </form>
     </section>
-    <section class="popup popup__success">
+    <!--Чтобы активировать, нужно прописать модификатор popup__open-->
+    <section class="popup">
+      <div class="popup__container">
+        <div class="header">
+          <h2 class="header__logo">NewsExplorer</h2>
+          <div class="popup__close popup__close_white"></div>
+        </div>
+        <a href="https://thenewsexplorer.tk/" class="popup__main">Главная</a>
+        <a href="https://thenewsexplorer.tk/articles" class="popup__articles">Сохранённые статьи</a>
+        <button class="popup__button popup__button_res">Авторизоваться</button>
+      </div>
+    </section>
+    <!--Чтобы активировать, нужно прописать модификатор popup__success-->
+    <section class="popup">
       <div class="popup__content">
         <div class="popup__close"></div>
         <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
         <div class="popup__entry">Выполнить вход</div>
       </div>
     </section>
-    <section class="popup popup__signin">
+    <!--Чтобы активировать, нужно прописать модификатор popup__signin-->
+    <section class="popup">
       <div class="popup__content">
         <div class="popup__close"></div>
         <h3 class="popup__title">Вход</h3>
-        <form class="popup__form" name="">
+        <form class="popup__form" name="signin">
           <label>
             <span class="popup__text">Email</span>
             <input required name="email" class="popup__input" placeholder="Введите почту">
@@ -54,11 +71,12 @@
         </form>
       </div>
     </section>
-    <section class="popup popup__signup">
+    <!--Чтобы активировать, нужно прописать модификатор popup__signup-->
+    <section class="popup">
       <div class="popup__content">
         <div class="popup__close"></div>
         <h3 class="popup__title">Регистрация</h3>
-        <form class="popup__form" name="">
+        <form class="popup__form" name="signup">
           <label>
             <span class="popup__text">Email</span>
             <input required name="email" class="popup__input" placeholder="Введите почту">
@@ -93,6 +111,7 @@
       <div class="articles-list">
         <div class="article">
           <div class="article__image">
+            <div class="article__autho">Войдите, чтобы сохранять статьи</div>
             <button class="button article__button article__button_saved"></button>
           </div>
           <div>
@@ -104,6 +123,7 @@
         </div>
         <div class="article">
           <div class="article__image">
+            <div class="article__autho">Войдите, чтобы сохранять статьи</div>
             <button class="button article__button article__button_saved"></button>
           </div>
           <div>
@@ -115,6 +135,7 @@
         </div>
         <div class="article">
           <div class="article__image">
+            <div class="article__autho">Войдите, чтобы сохранять статьи</div>
             <button class="button article__button article__button_saved"></button>
           </div>
           <div>
@@ -128,7 +149,7 @@
       <button class="articles__button">Показать еще</button>
     </section>
     <section class="author">
-      <img class="author__image" src="images/image-03.png" alt="Тут должна быть фотография автора">
+      <img class="author__image" src="./images/image-03.png" alt="Тут должна быть фотография автора">
       <div class="author__about">
         <h2 class="author__title">Об авторе</h2>
         <p class="author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
@@ -138,10 +159,11 @@
   </main>
   <footer class="footer">
     <h3 class="footer__present">© 2020 Supersite, Powered by News API</h3>
-    <a href="https://thenewsexplorer.tk/" class="footer__main">Главная</a>
+    <a href="./index.html" class="footer__main">Главная</a>
     <a href="https://praktikum.yandex.ru/" target="_blank" class="footer__ya">Яндекс.Практикум</a>
     <a href="https://github.com/" target="_blank" class="footer__github"></a>
     <a href="https://twitter.com/" target="_blank" class="footer__facebook"></a>
   </footer>
 </body>
 </html>
+

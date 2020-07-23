@@ -17,3 +17,9 @@
     height: 110px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .footer {
+    height: 150px;
+  }
+}

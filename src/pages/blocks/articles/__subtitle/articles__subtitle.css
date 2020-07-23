@@ -1,0 +1,24 @@
+.articles__subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+  margin-left: 104px;
+}
+
+@media screen and (max-width: 768px) {
+  .articles__subtitle {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articles__subtitle {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 288px;
+  }
+}

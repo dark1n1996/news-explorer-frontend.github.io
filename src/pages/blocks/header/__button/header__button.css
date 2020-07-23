@@ -1,0 +1,29 @@
+@import url('./_autho/header__button_autho.css');
+@import url('./_user/header__button_user.css');
+
+.header__button {
+  background-color: transparent;
+  border: 1px solid #1A1B22;
+  box-sizing: border-box;
+  border-radius: 100px;
+  color: black;
+  margin-left: 32px;
+  margin-right: 104px;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .header__button {
+    margin-right: 40px;
+  }
+}
+
+
+@media screen and (max-width: 740px) {
+  .header__button {
+    display: none;
+  }
+}

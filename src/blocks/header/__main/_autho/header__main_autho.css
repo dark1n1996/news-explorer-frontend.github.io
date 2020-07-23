@@ -1,0 +1,9 @@
+.header__main.header__main_autho {
+  margin-left: calc(100% - 685px);
+}
+
+@media screen and (max-width: 900px) {
+  .header__main.header__main_autho {
+    margin-left: calc(100% - 465px);
+  }
+}
