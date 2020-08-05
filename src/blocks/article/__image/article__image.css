@@ -1,8 +1,10 @@
 .article__image {
-  background-image: url('../../../images/image_04.png');
   height: 272px;
   background-repeat: no-repeat;
   position: relative;
+  background-size: cover;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
 }
 
 @media screen and (max-width: 768px) {

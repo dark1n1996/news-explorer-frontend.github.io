@@ -1,3 +1,7 @@
-.article__button_saved {
+.article__button.article__button_saved {
+  background-image: url('../../../../images/Group\ 12.png');
+}
+
+.article__button.article__button_saved:hover {
   background-image: url('../../../../images/Group\ 12.png');
 }

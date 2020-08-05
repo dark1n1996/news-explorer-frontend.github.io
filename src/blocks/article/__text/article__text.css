@@ -7,9 +7,7 @@
   width: 352px;
   margin-left: auto;
   margin-right: auto;
-  text-overflow: ellipsis;
-  overflow: auto;
-  height: 150px;
+  margin-bottom: 56px;
 }
 
 @media screen and (max-width: 768px) {

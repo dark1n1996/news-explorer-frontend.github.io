@@ -8,25 +8,25 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 </head>
 <body class="page">
-  <header class="header header__autho" style="display: none;">
+  <header class="header header__autho">
     <div class="header__logo">NewsExplorer</div>
     <div class="header__open"></div>
-    <a href="https://thenewsexplorer.tk/" class="header__main header__main_autho">Главная</a>
+    <a href="./index.html" class="header__main header__main_autho">Главная</a>
     <button class="header__button header__button_autho">Авторизоваться</button>
   </header>
-  <header class="header header__user">
+  <header class="header header__user" style="display: none;">
     <div class="header__logo">NewsExplorer</div>
     <div class="header__open"></div>
     <a href="./index.html" class="header__main header__main_user">Главная</a>
     <a href="./articles.html" class="header__articles">Сохранённые статьи</a>
-    <button class="header__button header__button_user">Грета <span>[-></span></button>
+    <button class="header__button header__button_user"><span class="header__name"></span><span> [-></span></button>
   </header>
   <main class="main">
     <section class="search">
       <h1 class="search__title">Что в мире творится?</h1>
       <h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
-      <form class="search__form">
-        <input class="search__input" type="text" placeholder="Природа">
+      <form class="search__form" name="search">
+        <input class="search__input" name="search" type="text" placeholder="Природа">
         <button class="button search__button" type="submit">Искать</button>
       </form>
     </section>
@@ -37,67 +37,69 @@
           <h2 class="header__logo">NewsExplorer</h2>
           <div class="popup__close popup__close_white"></div>
         </div>
-        <a href="https://thenewsexplorer.tk/" class="popup__main">Главная</a>
-        <a href="https://thenewsexplorer.tk/articles" class="popup__articles">Сохранённые статьи</a>
+        <a href="./index.html" class="popup__main">Главная</a>
+        <a href="./pages/articles.html" class="popup__articles">Сохранённые статьи</a>
         <button class="popup__button popup__button_res">Авторизоваться</button>
       </div>
     </section>
     <!--Чтобы активировать, нужно прописать модификатор popup__success-->
-    <section class="popup">
+    <section class="popup popup__success_active">
       <div class="popup__content">
-        <div class="popup__close"></div>
+        <div class="popup__close popup__close_success"></div>
         <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
         <div class="popup__entry">Выполнить вход</div>
       </div>
     </section>
     <!--Чтобы активировать, нужно прописать модификатор popup__signin-->
-    <section class="popup">
+    <section class="popup popup__signin_active">
       <div class="popup__content">
-        <div class="popup__close"></div>
+        <div class="popup__close popup__close_signin"></div>
         <h3 class="popup__title">Вход</h3>
         <form class="popup__form" name="signin">
-          <label>
+          <div>
             <span class="popup__text">Email</span>
-            <input required name="email" class="popup__input" placeholder="Введите почту">
+            <input required type="email" name="email" pattern="^[A-Za-z-\._\d]{2,}@[A-Za-z-]{2,}(\.\w{2,})+$" class="popup__input" placeholder="Введите почту">
             <span class="popup__error"></span>
-          </label>
-          <label>
+          </div>
+          <div>
             <span class="popup__text">Пароль</span>
-            <input required name="password" class="popup__input" placeholder="Введите пароль">
+            <input required minlength="8" type="password" name="password" class="popup__input" placeholder="Введите пароль">
             <span class="popup__error"></span>
-          </label>
-            <button class="button popup__button popup__button_disabled">Войти</button>
-            <div class="popup__reg"><span>или </span><span class="popup__span">Зарегистрироваться</span></div>
+          </div>
+          <span class="popup__error popup__error_server"></span>
+          <button class="button popup__button popup__button_disabled popup__button_signin">Войти</button>
+          <div class="popup__reg"><span>или </span><span class="popup__span popup__span_signin">Зарегистрироваться</span></div>
         </form>
       </div>
     </section>
     <!--Чтобы активировать, нужно прописать модификатор popup__signup-->
-    <section class="popup">
+    <section class="popup popup__signup_active">
       <div class="popup__content">
-        <div class="popup__close"></div>
+        <div class="popup__close popup__close_signup"></div>
         <h3 class="popup__title">Регистрация</h3>
         <form class="popup__form" name="signup">
-          <label>
+          <div>
             <span class="popup__text">Email</span>
-            <input required name="email" class="popup__input" placeholder="Введите почту">
+            <input required type="email" name="email" pattern="^[A-Za-z-\._\d]{2,}@[A-Za-z-]{2,}(\.\w{2,})+$" class="popup__input" placeholder="Введите почту">
             <span class="popup__error"></span>
-          </label>
-          <label>
+          </div>
+          <div>
             <span class="popup__text">Пароль</span>
-            <input required name="password" class="popup__input" placeholder="Введите пароль">
+            <input required type="text" minlength="8" name="password" class="popup__input" placeholder="Введите пароль">
             <span class="popup__error"></span>
-          </label>
-          <label>
+          </div>
+          <div>
             <span class="popup__text">Имя</span>
-            <input required name="name" class="popup__input" placeholder="Введите имя">
+            <input required type="text" minlength="2" maxlength="30" name="name" class="popup__input" placeholder="Введите имя">
             <span class="popup__error"></span>
-          </label>
-            <button class="button popup__button popup__button_disabled">Зарегистрироваться</button>
-            <div class="popup__reg"><span>или </span><span class="popup__span">Войти</span></div>
+          </div>
+          <span class="popup__error popup__error_server"></span>
+          <button class="button popup__button popup__button_disabled">Зарегистрироваться</button>
+          <div class="popup__reg"><span>или </span><span class="popup__span popup__span_signup popup__button_signup">Войти</span></div>
         </form>
       </div>
     </section>
-    <section class="preloader">
+    <section class="preloader" style="display: none;">
       <i class="preloader__item"></i>
       <h3 class="preloader__text">Идет поиск новостей...</h3>
     </section>
@@ -106,45 +108,9 @@
       <h2 class="not-found__title">Ничего не найдено</h2>
       <h3 class="not-found__text">К сожалению по вашему запросу ничего не найдено.</h3>
     </section>
-    <section class="articles">
+    <section class="articles" style="display: none;">
       <h2 class="articles__results">Результаты поиска</h2>
       <div class="articles-list">
-        <div class="article">
-          <div class="article__image">
-            <div class="article__autho">Войдите, чтобы сохранять статьи</div>
-            <button class="button article__button article__button_saved"></button>
-          </div>
-          <div>
-            <h4 class="article__date">2 августа, 2019</h4>
-            <h2 class="article__title">Национальное достояние – парки</h2>
-            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <h3 class="article__source">Лента.ру</h3>
-          </div>
-        </div>
-        <div class="article">
-          <div class="article__image">
-            <div class="article__autho">Войдите, чтобы сохранять статьи</div>
-            <button class="button article__button article__button_saved"></button>
-          </div>
-          <div>
-            <h4 class="article__date">2 августа, 2019</h4>
-            <h2 class="article__title">Лесные огоньки: история одной фотографии</h2>
-            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-            <h3 class="article__source">Медуза</h3>
-          </div>
-        </div>
-        <div class="article">
-          <div class="article__image">
-            <div class="article__autho">Войдите, чтобы сохранять статьи</div>
-            <button class="button article__button article__button_saved"></button>
-          </div>
-          <div>
-            <h4 class="article__date">2 августа, 2019</h4>
-            <h2 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <h3 class="article__source">РИА</h3>
-          </div>
-        </div>
       </div>
       <button class="articles__button">Показать еще</button>
     </section>
@@ -164,6 +130,7 @@
     <a href="https://github.com/" target="_blank" class="footer__github"></a>
     <a href="https://twitter.com/" target="_blank" class="footer__facebook"></a>
   </footer>
+  <script src="<%= htmlWebpackPlugin.files.js[0] %>"></script>
 </body>
 </html>
 

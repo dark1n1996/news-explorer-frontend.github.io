@@ -7,11 +7,8 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
   color: #B6BCBF;
-  margin-left: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .article__source {
-    margin-left: 16px;
-  }
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  margin: 0;
 }
