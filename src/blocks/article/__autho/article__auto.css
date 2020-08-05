@@ -1,0 +1,17 @@
+.article__autho {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  width: 182px;
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 24px;
+  right: 69px;
+  border-radius: 10px;
+  display: none;
+}

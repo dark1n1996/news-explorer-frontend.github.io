@@ -1,0 +1,31 @@
+.author__about {
+  margin-left: 56px;
+  width: calc(100% - 728px)
+}
+
+@media screen and (max-width: 940px) {
+  .author__about {
+    width: calc(100% - 456px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .author__about {
+    width: calc(100% - 456px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .author__about {
+    width: 400px;
+    margin: 0;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .author__about {
+    width: 288px;
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,45 @@
+.footer__main {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: calc(100% - 920px);
+  width: 112px;
+  height: 22px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer__main:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 940px) {
+  .footer__main {
+    margin-left: calc(100% - 792px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__main {
+    width: 88px;
+    margin-left: calc(100% - 740px);
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .footer__main {
+    bottom: 110px;
+    left: 80px;
+    position: absolute;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__main {
+    left: 16px;
+  }
+}

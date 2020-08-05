@@ -1,0 +1,23 @@
+.article__key-word {
+  position: absolute;
+  width: 88px;
+  height: 40px;
+  top: 24px;
+  left: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 10px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .article__key-word {
+    top: 8px;
+    left: 8px;
+  }
+}

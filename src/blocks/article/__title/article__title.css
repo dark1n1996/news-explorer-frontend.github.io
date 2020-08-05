@@ -1,0 +1,26 @@
+.article__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  width: 352px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .article__title {
+    width: 192px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article__title {
+    width: 256px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

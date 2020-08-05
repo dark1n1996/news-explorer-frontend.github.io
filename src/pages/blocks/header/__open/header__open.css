@@ -1,0 +1,18 @@
+.header__open {
+  background-image: url('../../../images/menu 2.svg');
+  width: 24px;
+  height: 24px;
+  margin-left: calc(100% - 300px);
+}
+
+@media screen and (min-width: 741px) {
+  .header__open {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__open {
+    margin-left: calc(100% - 252px);
+  }
+}

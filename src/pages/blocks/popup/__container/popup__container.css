@@ -1,0 +1,9 @@
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 286px;
+  background: #1A1B22;
+  width: 100%;
+}

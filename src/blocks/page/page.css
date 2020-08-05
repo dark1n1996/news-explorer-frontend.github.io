@@ -1,0 +1,46 @@
+@font-face {
+  src: url('../../vendor/fonts/roboto-black.woff') format('woff');
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+@font-face {
+  src: url('../../vendor/fonts/roboto-medium.woff') format('woff');
+  font-family: 'Roboto';
+  font-weight: normal;
+}
+@font-face {
+  src: url('../../vendor/fonts/roboto-regular.woff') format('woff');
+  font-family: 'Roboto';
+  font-weight: lighter;
+}
+
+@font-face {
+  src: url('../../vendor/fonts/robotoslab-regular.woff') format('woff');
+  font-family: 'Roboto Slab';
+}
+
+@font-face {
+  src: url('../../vendor/fonts/sourcesanspro-regular.woff') format('woff');
+  font-family: 'Source Sans Pro';
+}
+
+@font-face {
+  src: url('../../vendor/fonts/inter-regular.woff') format('woff');
+  font-family: 'Inter';
+}
+
+.page {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+  background-image: url('../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: white;
+}
+
+@media screen and (min-width: 1441px){
+  .page {
+    background-size: cover;
+  }
+}

@@ -1,0 +1,36 @@
+.footer__ya {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  width: 192px;
+  text-align: center;
+  height: 22px;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer__ya:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__ya {
+    width: 176px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .footer__ya {
+    bottom: 70px;
+    left: 80px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__ya {
+    left: 16px;
+  }
+}

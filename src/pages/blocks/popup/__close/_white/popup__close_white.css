@@ -1,0 +1,12 @@
+.popup__close.popup__close_white {
+  margin-left: calc(100% - 300px);
+  position: static;
+  width: 13px;
+  height: 13px;
+}
+
+@media screen and (max-width: 500px) {
+  .popup__close.popup__close_white {
+    margin-left: calc(100% - 250px);
+  }
+}

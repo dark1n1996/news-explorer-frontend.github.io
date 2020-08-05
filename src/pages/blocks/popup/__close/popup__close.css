@@ -1,0 +1,21 @@
+@import url('./_white/popup__close_white.css');
+
+.popup__close {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: -26px;
+  right: -26px;
+  cursor: pointer;
+  background-image: url('../../../images/close.svg');
+  background-size: contain;
+}
+
+@media screen and (max-width: 500px) {
+  .popup__close {
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: -25px;
+  }
+}

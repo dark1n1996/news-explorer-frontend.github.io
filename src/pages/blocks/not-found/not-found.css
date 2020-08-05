@@ -1,0 +1,13 @@
+@import url('./__image/not-found__image.css');
+@import url('./__text/not-found__text.css');
+@import url('./__title/not-found__title.css');
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 166px;
+  padding-bottom: 80px;
+  display: none;
+}

@@ -1,0 +1,22 @@
+.articles-list {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,400px);
+  grid-gap: 16px 16px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .articles-list {
+    margin-top: 32px;
+    grid-template-columns: repeat(auto-fill,224px);
+    grid-gap: 8px 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articles-list {
+    margin-top: 32px;
+    grid-template-columns: repeat(auto-fill,288px);
+  }
+}

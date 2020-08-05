@@ -1,0 +1,22 @@
+@import url('./_autho/header__main_autho.css');
+@import url('./_user/header__main_user.css');
+
+.header__main {
+  font-size: 18px;
+  line-height: 24px;
+  width: 69px;
+  height: 24px;
+  text-decoration: none;
+  color: black;
+  font-family: Roboto;
+}
+
+.header__main:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 740px) {
+  .header__main {
+    display: none;
+  }
+}

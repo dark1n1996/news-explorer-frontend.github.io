@@ -1,0 +1,4 @@
+.popup.popup__open {
+  display: flex;
+  align-items: flex-start;
+}
