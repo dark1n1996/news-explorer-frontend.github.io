@@ -26,19 +26,20 @@
       <h1 class="search__title">Что в мире творится?</h1>
       <h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
       <form class="search__form" name="search">
-        <input class="search__input" name="search" type="text" placeholder="Природа">
+        <input required class="search__input" name="search" type="text" placeholder="Природа">
         <button class="button search__button" type="submit">Искать</button>
+        <div style="display: flex; justify-content: center;"><span class="popup__error popup__error_server"></span></div>
       </form>
     </section>
     <!--Чтобы активировать, нужно прописать модификатор popup__open-->
-    <section class="popup">
+    <section class="popup popup__open_active">
       <div class="popup__container">
         <div class="header">
           <h2 class="header__logo">NewsExplorer</h2>
           <div class="popup__close popup__close_white"></div>
         </div>
         <a href="./index.html" class="popup__main">Главная</a>
-        <a href="./pages/articles.html" class="popup__articles">Сохранённые статьи</a>
+        <a href="./articles.html" class="popup__articles">Сохранённые статьи</a>
         <button class="popup__button popup__button_res">Авторизоваться</button>
       </div>
     </section>
@@ -94,8 +95,8 @@
             <span class="popup__error"></span>
           </div>
           <span class="popup__error popup__error_server"></span>
-          <button class="button popup__button popup__button_disabled">Зарегистрироваться</button>
-          <div class="popup__reg"><span>или </span><span class="popup__span popup__span_signup popup__button_signup">Войти</span></div>
+          <button class="button popup__button popup__button_disabled popup__button_signup">Зарегистрироваться</button>
+          <div class="popup__reg"><span>или </span><span class="popup__span popup__span_signup">Войти</span></div>
         </form>
       </div>
     </section>
@@ -133,4 +134,3 @@
   <script src="<%= htmlWebpackPlugin.files.js[0] %>"></script>
 </body>
 </html>
-

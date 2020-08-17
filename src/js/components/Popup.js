@@ -4,7 +4,13 @@ export default class Popap {
   }
   open(event) {
     if(event.target.classList.contains('header__button_autho')) {
-      document.querySelector('.popup__signin_active').classList.add('popup__signin');
+      return document.querySelector('.popup__signin_active').classList.add('popup__signin');
+    }
+    if(event.target.classList.contains('header__open')) {
+      return document.querySelector('.popup__open_active').classList.add('popup__open');
+    }
+    if(event.target.classList.contains('popup__button_res')) {
+      return document.querySelector('.popup__signup_active').classList.add('popup__signup');
     }
   }
   close(event, status) {
@@ -26,12 +32,16 @@ export default class Popap {
     if(event.target.classList.contains('popup__entry')) {
       return document.querySelector('.popup__success_active').classList.remove('popup__success');
     }
-    if(status === 201 && event.target.classList.contains('popup__button_signup')) {
+    if(event.target.classList.contains('popup__close_white')) {
+      return document.querySelector('.popup__open_active').classList.remove('popup__open');
+    }
+    if(status === 201) {
       return document.querySelector('.popup__signup_active').classList.remove('popup__signup');
     }
-    if(status === 201 && event.target.classList.contains('popup__button_signin')) {
+    if(status === 200) {
       return document.querySelector('.popup__signin_active').classList.remove('popup__signin');
     }
+
   }
   setContent(event, status) {
     if(event.target.classList.contains('popup__span_signin')) {
@@ -45,6 +55,15 @@ export default class Popap {
     }
     if(status === 201) {
       return document.querySelector('.popup__success_active').classList.add('popup__success');
+    }
+  }
+  clearContent(status, formSignupElement, formSigninElement) {
+    if(status === 200 || status === 201) {
+      formSigninElement.email.value = '';
+      formSigninElement.password.value = '';
+      formSignupElement.email.value = '';
+      formSignupElement.password.value = '';
+      formSignupElement.name.value = '';
     }
   }
 

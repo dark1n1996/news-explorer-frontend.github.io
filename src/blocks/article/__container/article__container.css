@@ -1,0 +1,18 @@
+.article__container {
+  height: 272px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .article__container {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article__container {
+    height: 196px;
+  }
+}

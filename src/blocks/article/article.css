@@ -5,6 +5,7 @@
 @import url('./__title/article__title.css');
 @import url('./__button/article__button.css');
 @import url('./__autho/article__auto.css');
+@import url('./__container/article__container.css');
 
 .article {
   background-color: white;

@@ -19,8 +19,11 @@ export default class NewsCardList {
       }
     }
   }
-  showMore() {
+  clearShowMore() {
     this.articlesButton.setAttribute('style', 'display: none;')
+  }
+  showMore() {
+    this.articlesButton.setAttribute('style', 'display: block;')
   }
   renderLoader() {
     this.preloader.setAttribute('style', 'display: flex;');

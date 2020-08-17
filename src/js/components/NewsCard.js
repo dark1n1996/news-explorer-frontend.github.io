@@ -6,8 +6,12 @@ export default class NewsCard {
     this.moment = moment;
   }
   renderIcon(articles, number) {
+    if(!articles.urlToImage) {
+      articles.urlToImage = 'https://sun9-53.userapi.com/t3ndc0TC2iy0Q8QiN0iD_xz82mVHSnBNMAi-eg/12oItprDwDk.jpg';
+    }
     const icon = `<div class="article" name="${number}">
-    <div class="article__image" style="background-image: url(${articles.urlToImage})">
+    <div class="article__container">
+      <a href="${articles.url}" target="_blank"><img class="article__image" src="${articles.urlToImage}"></a>
       <div class="article__autho">Войдите, чтобы сохранять статьи</div>
       <button class="button article__button"></button>
     </div>

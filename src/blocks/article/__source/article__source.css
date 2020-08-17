@@ -12,3 +12,9 @@
   bottom: 24px;
   margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .article__source {
+    left: 16px;
+  }
+}
