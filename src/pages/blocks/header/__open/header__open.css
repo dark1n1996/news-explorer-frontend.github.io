@@ -2,7 +2,8 @@
   background-image: url('../../../images/menu 2.svg');
   width: 24px;
   height: 24px;
-  margin-left: calc(100% - 300px);
+  margin-left: calc(100% - 294px);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 741px) {
@@ -13,6 +14,6 @@
 
 @media screen and (max-width: 500px) {
   .header__open {
-    margin-left: calc(100% - 252px);
+    margin-left: calc(100% - 247px);
   }
 }

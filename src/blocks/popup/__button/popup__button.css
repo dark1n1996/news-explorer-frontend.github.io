@@ -1,5 +1,6 @@
 @import url('./_disabled/popup__button_disabled.css');
 @import url('./_res/popup__button_res.css');
+@import url('./_user/popup__button_user.css');
 
 .popup__button {
   border-radius: 100px;

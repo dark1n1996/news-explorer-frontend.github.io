@@ -5,7 +5,8 @@ export default class NewsApi {
     this.now = now;
     this.pageSize = pageSize;
   }
+
   getNews(keyWord) {
-    return fetch(`http://newsapi.org/v2/everything?q=${keyWord}&from=${this.sevenDaysAgo}&to=${this.now}&sortBy=publishedAt&pageSize=${this.pageSize}&apiKey=${this.apiKey}`)
+    return fetch(`https://nomoreparties.co/news/v2/everything?q=${keyWord}&from=${this.sevenDaysAgo}&to=${this.now}&sortBy=publishedAt&pageSize=${this.pageSize}&apiKey=${this.apiKey}`);
   }
 }

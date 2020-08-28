@@ -5,6 +5,7 @@ export default class Form {
     this.signupForm = signupForm;
     this.signinForm = signinForm;
   }
+
   _validateInputElement(input, errorPlace) {
     if (input.validity.valueMissing) {
       return errorPlace.textContent = this.errors.requiredText;
@@ -23,28 +24,32 @@ export default class Form {
     }
     return errorPlace.textContent = '';
   }
+
   _validateForm(form, button) {
     button.disabled = !form.checkValidity();
-    if(form.checkValidity()) {
+    if (form.checkValidity()) {
       button.classList.remove('popup__button_disabled');
     } else {
       button.classList.add('popup__button_disabled');
     }
   }
+
   _getInfo() {
     return {
       signupEmail: this.signupForm.elements.email.value,
       signupName: this.signupForm.elements.name.value,
       signupPassword: this.signupForm.elements.password.value,
-    }
+    };
   }
-  setEventListerners(form) {
+
+  setEventListeners(form) {
     const button = form.querySelector('.popup__button');
     form.addEventListener('input', (e) => {
       this._validateInputElement(e.target, e.target.closest('div').querySelector('.popup__error'));
       this._validateForm(form, button);
-    })
+    });
   }
+
   setServerError(errBlock, err) {
     errBlock.textContent = err;
   }

@@ -39,8 +39,18 @@
           <div class="popup__close popup__close_white"></div>
         </div>
         <a href="./index.html" class="popup__main">Главная</a>
-        <a href="./articles.html" class="popup__articles">Сохранённые статьи</a>
         <button class="popup__button popup__button_res">Авторизоваться</button>
+      </div>
+    </section>
+    <section class="popup popup__open2_active">
+      <div class="popup__container">
+        <div class="header">
+          <h2 class="header__logo">NewsExplorer</h2>
+          <div class="popup__close popup__close_white"></div>
+        </div>
+        <a href="./index.html" class="popup__main">Главная</a>
+        <a href="./articles.html" class="popup__articles">Сохранённые статьи</a>
+        <button class="header__button popup__button_user"><span class="popup__name"></span><span>[-></span></button>
       </div>
     </section>
     <!--Чтобы активировать, нужно прописать модификатор popup__success-->
@@ -59,12 +69,12 @@
         <form class="popup__form" name="signin">
           <div>
             <span class="popup__text">Email</span>
-            <input required type="email" name="email" pattern="^[A-Za-z-\._\d]{2,}@[A-Za-z-]{2,}(\.\w{2,})+$" class="popup__input" placeholder="Введите почту">
+            <input required type="email" name="email" autocomplete="username" pattern="^[A-Za-z-\._\d]{2,}@[A-Za-z-]{2,}(\.\w{2,})+$" class="popup__input" placeholder="Введите почту">
             <span class="popup__error"></span>
           </div>
           <div>
             <span class="popup__text">Пароль</span>
-            <input required minlength="8" type="password" name="password" class="popup__input" placeholder="Введите пароль">
+            <input required minlength="8" type="password" autocomplete="current-password" name="password" class="popup__input" placeholder="Введите пароль">
             <span class="popup__error"></span>
           </div>
           <span class="popup__error popup__error_server"></span>

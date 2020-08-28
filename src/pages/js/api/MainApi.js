@@ -1,45 +1,46 @@
 export default class MainApi {
-  constructor() {
-
+  constructor(config) {
+    this.config = config;
   }
 
   _getRequestUser(url, method) {
-    return fetch(url, {
+    return fetch(this.config + url, {
       method,
       credentials: 'include',
-    })
+    });
   }
+
   _getRequestArticles(url, method) {
-    return fetch(url, {
+    return fetch(this.config + url, {
       method,
       credentials: 'include',
-    })
+    });
   }
+
   _deleteRequestArticle(url, method, id) {
-    return fetch(url, {
+    return fetch(this.config + url, {
       method,
       credentials: 'include',
       body: {
         id,
-      }
-    })
+      },
+    });
   }
-  getUser(){
-    return this._getRequestUser('http://localhost:3000/users/me', 'GET');
+
+  getUser() {
+    return this._getRequestUser('users/me', 'GET');
   }
-  getArticles(){
-    return this._getRequestArticles('http://localhost:3000/articles', 'GET')
+
+  getArticles() {
+    return this._getRequestArticles('articles', 'GET');
   }
-  deleteArticle(id){
-    return this._deleteRequestArticle(`http://localhost:3000/articles/${id}`, 'DELETE')
+
+  deleteArticle(id) {
+    return this._deleteRequestArticle(`articles/${id}`, 'DELETE');
   }
 }
 
-
-
-
-
-    /*.then((res) => {
+/* .then((res) => {
       console.log(res.status)
       if(res.status === 409) {
         return Promise.reject(`Пользователь с такой электронной почтой уже существует`);
@@ -52,4 +53,4 @@ export default class MainApi {
     .then((data) => {
       console.log(data)
     })
-    .catch(err => console.log(err))*/
+    .catch(err => console.log(err)) */

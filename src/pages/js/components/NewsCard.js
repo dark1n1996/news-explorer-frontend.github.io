@@ -2,6 +2,7 @@ export default class NewsCard {
   constructor(moment) {
     this.moment = moment;
   }
+
   renderIcon(article) {
     const icon = `<div class="article" name="${article._id}">
     <div class="article__container">
@@ -11,13 +12,12 @@ export default class NewsCard {
       <button class="button article__button article__button_deleted"></button>
     </div>
     <div>
-      <h4 class="article__date">${this.moment(article.date).locale('ru').format("LL")}</h4>
+      <h4 class="article__date">${this.moment(article.date).locale('ru').format('LL')}</h4>
       <h2 class="article__title">${article.title}</h2>
       <p class="article__text">${article.text}</p>
       <h3 class="article__source">${article.source}</h3>
     </div>
   </div>`;
-  return icon;
+    return icon;
   }
 }
-
