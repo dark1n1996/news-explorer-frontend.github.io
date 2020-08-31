@@ -1,18 +1,13 @@
 .article__image {
-  background-image: url('../../../images/image_04.png');
-  height: 272px;
-  background-repeat: no-repeat;
-  position: relative;
+  width: 100%;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+  min-height: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .article__image {
-    height: 150px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .article__image {
-    height: 196px;
-  }
+.article__image:hover {
+  transform: scale(1.1);
 }

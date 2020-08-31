@@ -1,0 +1,11 @@
+.header__button.popup__button_user {
+  display: flex;
+  width: 288px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #FFFFFF;
+  color: white;
+
+}

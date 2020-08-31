@@ -6,3 +6,10 @@
 @import url('./__button/article__button.css');
 @import url('./__key-word/article__key-word.css');
 @import url('./__delete/article__delete.css');
+@import url('./__container/article__container.css');
+
+.article {
+  background-color: #fff;
+  border-radius: 16px;
+  position: relative;
+}
